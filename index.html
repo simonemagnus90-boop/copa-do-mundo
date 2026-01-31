@@ -5,77 +5,151 @@
 <title>Copa do Mundo</title>
 
 <style>
+
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
+    background: rgb(240,240,240);
 }
 
+/* Cabeçalho */
 header{
-    background:#0b6623;
+    background: rgb(20,120,60);
     color:white;
-    padding:20px;
+    padding:25px;
     text-align:center;
 }
 
-nav{
-    background:#004d1a;
-    padding:10px;
-    text-align:center;
-}
+/* Seções */
 
-nav a{
-    color:white;
-    margin:15px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    text-decoration:underline;
-}
-
-section{
-    padding:30px;
-    background:white;
+.historia{
+    background: rgb(220,235,255);
+    padding:25px;
     margin:20px;
-    border-radius:8px;
+    border-radius:10px;
 }
 
-h2{
-    color:#0b6623;
+.fotos{
+    background: rgb(255,230,220);
+    padding:25px;
+    margin:20px;
+    border-radius:10px;
+    text-align:center;
 }
+
+.campeoes{
+    background: rgb(220,255,230);
+    padding:25px;
+    margin:20px;
+    border-radius:10px;
+}
+
+/* Imagens */
+
+img{
+    width:250px;
+    border-radius:10px;
+    margin:10px;
+}
+
+/* Rodapé */
 
 footer{
-    background:#0b6623;
+    background: rgb(20,120,60);
     color:white;
     text-align:center;
     padding:15px;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
 <header>
-<h1>🌍 Copa do Mundo de Futebol ⚽</h1>
-<p>O maior evento esportivo do planeta</p>
+<h1>Simone Silva Magnus Coelho</h1>
+<p>Site da Copa do Mundo</p>
 </header>
 
-<nav>
-<a href="#historia">História</a>
-<a href="#selecoes">Seleções</a>
-<a href="#curiosidades">Curiosidades</a>
-</nav>
-
-<section id="historia">
+<section class="historia">
 <h2>📜 História da Copa do Mundo</h2>
+
 <p>
-A Copa do Mundo é o principal torneio de futebol internacional, organizado pela FIFA.
-A primeira edição aconteceu em 1930, no Uruguai. Desde então, o evento reúne seleções de vários países para disputar o título mundial.
+A Copa do Mundo é o maior torneio de futebol do planeta, organizado pela FIFA. 
+Sua primeira edição ocorreu em 1930, no Uruguai, reunindo seleções de diferentes países para disputar o título mundial.
+</p>
+
+<p>
+Ao longo dos anos, a competição cresceu em importância e passou a ser acompanhada por bilhões de pessoas em todo o mundo. 
+Cada edição trouxe momentos históricos, grandes jogadores e partidas inesquecíveis.
+</p>
+
+<p>
+Hoje, a Copa do Mundo é um evento que vai além do esporte, unindo culturas, nações e torcedores em uma grande celebração do futebol.
 </p>
 </section>
+
+<section class="fotos">
+<h2>📸 Fotos da Copa do Mundo</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/World_Cup_Trophy.jpg/300px-World_Cup_Trophy.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/2018_FIFA_World_Cup_Final.jpg/320px-2018_FIFA_World_Cup_Final.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Maracana_Stadium_Rio.jpg/320px-Maracana_Stadium_Rio.jpg">
+
+</section>
+
+<section class="campeoes">
+<h2>🏆 Algumas Seleções Campeãs</h2>
+
+<ul>
+<li>Brasil</li>
+<li>Alemanha</li>
+<li>Itália</li>
+<li>Argentina</li>
+<li>França</li>
+</ul>
+
+</section>
+
+<footer>
+<p id="rodape"></p>
+</footer>
+
+<script>
+
+function atualizarRodape(){
+    const agora = new Date();
+
+    const data = agora.toLocaleDateString();
+    const hora = agora.toLocaleTimeString();
+
+    document.getElementById("rodape").innerHTML =
+    "Ermo - SC | " + data + " | " + hora;
+}
+
+atualizarRodape();
+setInterval(atualizarRodape,1000);
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <section id="selecoes">
 <h2>🏆 Principais Seleções Campeãs</h2>
