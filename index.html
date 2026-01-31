@@ -7,58 +7,96 @@
 <style>
 
 body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(240,240,240);
+margin:0;
+font-family: Arial, Helvetica, sans-serif;
+background:rgb(240,240,240);
+scroll-behavior:smooth;
 }
 
-/* Cabeçalho */
 header{
-    background: rgb(20,120,60);
-    color:white;
-    padding:25px;
-    text-align:center;
+background:rgb(15,120,70);
+color:white;
+padding:30px;
+text-align:center;
+animation: fade 2s;
 }
 
-/* Seções */
-
-.historia{
-    background: rgb(220,235,255);
-    padding:25px;
-    margin:20px;
-    border-radius:10px;
+nav{
+background:rgb(10,90,50);
+padding:12px;
+text-align:center;
+position:sticky;
+top:0;
 }
 
-.fotos{
-    background: rgb(255,230,220);
-    padding:25px;
-    margin:20px;
-    border-radius:10px;
-    text-align:center;
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.campeoes{
-    background: rgb(220,255,230);
-    padding:25px;
-    margin:20px;
-    border-radius:10px;
+nav a:hover{
+color:rgb(255,220,150);
 }
 
-/* Imagens */
+section{
+margin:30px;
+padding:30px;
+border-radius:12px;
+animation: subir 1.5s;
+}
+
+.historia{ background:rgb(220,235,255);}
+.imagens{ background:rgb(255,230,210); text-align:center;}
+.jogos{ background:rgb(230,255,230);}
+.grupos{ background:rgb(245,230,255);}
 
 img{
-    width:250px;
-    border-radius:10px;
-    margin:10px;
+width:260px;
+margin:12px;
+border-radius:12px;
+transition:0.5s;
 }
 
-/* Rodapé */
+img:hover{
+transform:scale(1.08);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+th,td{
+border:1px solid rgb(120,120,120);
+padding:10px;
+text-align:center;
+}
+
+th{
+background:rgb(15,120,70);
+color:white;
+}
 
 footer{
-    background: rgb(20,120,60);
-    color:white;
-    text-align:center;
-    padding:15px;
+background:rgb(15,120,70);
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* animações */
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes subir{
+from{transform:translateY(50px); opacity:0;}
+to{transform:translateY(0); opacity:1;}
 }
 
 </style>
@@ -71,45 +109,93 @@ footer{
 <p>Site da Copa do Mundo</p>
 </header>
 
-<section class="historia">
+<nav>
+<a href="#historia">História</a>
+<a href="#imagens">Imagens</a>
+<a href="#jogos">Jogos</a>
+<a href="#grupos">Grupos</a>
+</nav>
+
+<section id="historia" class="historia">
+
 <h2>📜 História da Copa do Mundo</h2>
 
 <p>
-A Copa do Mundo é o maior torneio de futebol do planeta, organizado pela FIFA. 
-Sua primeira edição ocorreu em 1930, no Uruguai, reunindo seleções de diferentes países para disputar o título mundial.
+A Copa do Mundo é o principal torneio de futebol internacional, criado pela FIFA em 1930, no Uruguai. Desde então, o campeonato reúne seleções de vários países para disputar o título de melhor do mundo.
 </p>
 
 <p>
-Ao longo dos anos, a competição cresceu em importância e passou a ser acompanhada por bilhões de pessoas em todo o mundo. 
-Cada edição trouxe momentos históricos, grandes jogadores e partidas inesquecíveis.
+Com o passar dos anos, o evento se tornou um dos maiores espetáculos esportivos do planeta, atraindo bilhões de espectadores e revelando grandes ídolos do futebol mundial.
 </p>
 
 <p>
-Hoje, a Copa do Mundo é um evento que vai além do esporte, unindo culturas, nações e torcedores em uma grande celebração do futebol.
+Além do esporte, a Copa do Mundo representa integração cultural, união entre povos e celebração da paixão pelo futebol.
 </p>
-</section>
-
-<section class="fotos">
-<h2>📸 Fotos da Copa do Mundo</h2>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/World_Cup_Trophy.jpg/300px-World_Cup_Trophy.jpg">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/2018_FIFA_World_Cup_Final.jpg/320px-2018_FIFA_World_Cup_Final.jpg">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Maracana_Stadium_Rio.jpg/320px-Maracana_Stadium_Rio.jpg">
 
 </section>
 
-<section class="campeoes">
-<h2>🏆 Algumas Seleções Campeãs</h2>
+<section id="imagens" class="imagens">
+
+<h2>📸 Imagens da Copa do Mundo</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/World_Cup_Trophy.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/2018_FIFA_World_Cup_Final.jpg">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Maracana_Stadium_Rio.jpg">
+
+</section>
+
+<section id="jogos" class="jogos">
+
+<h2>⚽ Página de Jogos (exemplo)</h2>
 
 <ul>
-<li>Brasil</li>
-<li>Alemanha</li>
-<li>Itália</li>
-<li>Argentina</li>
-<li>França</li>
+<li>Brasil x Argentina</li>
+<li>Alemanha x França</li>
+<li>Itália x Espanha</li>
+<li>Portugal x Inglaterra</li>
 </ul>
+
+</section>
+
+<section id="grupos" class="grupos">
+
+<h2>📊 Tabela de Grupos (exemplo)</h2>
+
+<table>
+
+<tr>
+<th>Grupo</th>
+<th>Seleção</th>
+<th>Pontos</th>
+</tr>
+
+<tr>
+<td>A</td>
+<td>Brasil</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>A</td>
+<td>Alemanha</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>B</td>
+<td>Argentina</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>B</td>
+<td>França</td>
+<td>6</td>
+</tr>
+
+</table>
 
 </section>
 
@@ -120,13 +206,12 @@ Hoje, a Copa do Mundo é um evento que vai além do esporte, unindo culturas, na
 <script>
 
 function atualizarRodape(){
-    const agora = new Date();
+let agora = new Date();
+let data = agora.toLocaleDateString();
+let hora = agora.toLocaleTimeString();
 
-    const data = agora.toLocaleDateString();
-    const hora = agora.toLocaleTimeString();
-
-    document.getElementById("rodape").innerHTML =
-    "Ermo - SC | " + data + " | " + hora;
+document.getElementById("rodape").innerHTML =
+"Ermo - SC | " + data + " | " + hora;
 }
 
 atualizarRodape();
@@ -151,29 +236,23 @@ setInterval(atualizarRodape,1000);
 
 
 
-<section id="selecoes">
-<h2>🏆 Principais Seleções Campeãs</h2>
-<ul>
-<li>Brasil</li>
-<li>Alemanha</li>
-<li>Itália</li>
-<li>Argentina</li>
-<li>França</li>
-</ul>
-</section>
 
-<section id="curiosidades">
-<h2>🤔 Curiosidades</h2>
-<p>
-O Brasil é o país que mais venceu Copas do Mundo.  
-O torneio acontece a cada quatro anos e é assistido por bilhões de pessoas no mundo todo.
-</p>
-</section>
 
-<footer>
-<p>Site criado por Simone Magnus - GitHub Pages</p>
-</footer>
+    
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
