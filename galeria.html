@@ -1,0 +1,26 @@
+<section class="imagens">
+
+<h2>🎥 Destaques da Copa</h2>
+
+<img id="slide" src="imagens/foto1.jpg" width="80%" style="border-radius:15px;">
+
+</section>
+
+<script>
+let fotos = [
+"imagens/foto1.jpg",
+"imagens/foto2.jpg",
+"imagens/foto3.jpg",
+"imagens/foto4.jpg",
+"imagens/foto5.jpg",
+"imagens/foto6.jpg"
+];
+
+let i = 0;
+
+setInterval(()=>{
+ i++;
+ if(i >= fotos.length){ i = 0; }
+ document.getElementById("slide").src = fotos[i];
+},3000);
+</script>
